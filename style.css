@@ -1,0 +1,384 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.header {
+    width: 100%;
+    padding: 5px 20px;
+    background-color: aliceblue;
+    border-bottom: 2px solid rgb(233, 214, 214);
+    display: flex;
+    justify-content: space-between;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 100;
+}
+
+.logobox {
+    display: flex;
+    align-items: center;
+}
+
+#logo {
+    font-size: 30px;
+    color: rgb(6, 144, 6);
+}
+
+.menubox {
+    display: flex;
+    align-items: center;
+}
+
+main {
+    margin-top: 45px;
+    padding: 20px 30px 40px;
+}
+
+.herobox {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.heroimg {
+    height: 400px;
+    width: 400px;
+    margin: 35px;
+    transition-property: rotate, scale;
+    transition-duration: 1s;
+}
+
+.heroimg:hover {
+    rotate: 10deg;
+    scale: 0.9;
+}
+
+.delicious {
+    height: 500px;
+    width: 500px;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    left: -40px;
+}
+
+
+.discount {
+    width: fit-content;
+    padding: 3px 6px;
+    margin: 130px 0 10px;
+    color: white;
+    background-color: green;
+}
+
+.delicious h1 {
+    width: 250px;
+    font-weight: 300;
+    font-size: 40px;
+    margin-bottom: 10px;
+}
+
+.delicious button {
+    width: fit-content;
+    margin-top: 10px;
+    border: none;
+    padding: 6px 12px;
+    color: white;
+    background-color: rgb(250, 146, 108);
+    font-size: 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition-property: background-color, scale;
+    transition-duration: 400ms;
+}
+
+.delicious button:hover {
+    background-color: chocolate;
+    scale: 1.03;
+}
+
+.featurebox {
+    padding: 3px 0;
+    display: flex;
+    gap: 25px;
+}
+
+.featurebox:hover> :not(:hover) {
+    opacity: 0.4;
+}
+
+.voucherbox,
+.freshbox,
+.deliverybox {
+    cursor: pointer;
+    background-color: rgb(194, 174, 214, 0.5);
+    transition-property: opacity, background-color, scale;
+    transition-duration: 800ms;
+}
+
+.voucherbox:hover,
+.freshbox:hover,
+.deliverybox:hover {
+    background-color: rgb(194, 174, 214, 0.9);
+    scale: 1.02;
+}
+
+
+.icon {
+    height: 60px;
+    width: 80px;
+    display: inline-block;
+}
+
+.icon img {
+    width: 100%;
+    height: 100%;
+}
+
+
+.contentbox span {
+    font-weight: 550;
+}
+
+.commonbox {
+    height: 80px;
+    padding: 0 15px;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+hr {
+    margin: 50px 0;
+    border: 1.05px solid rgb(233, 214, 214);
+}
+
+.ourmenu {
+    width: fit-content;
+    margin: 0 auto;
+    padding: 5px 10px;
+    border: none;
+    border-radius: 5px;
+    color: darkgreen;
+    background-color: pink;
+    font-size: 20px;
+    transition-property: background-color, scale;
+    transition-duration: 400ms;
+    display: block;
+}
+
+.ourmenu:hover {
+    background-color: rgb(252, 171, 185);
+    scale: 1.03;
+}
+
+.explore {
+    margin: 30px 0 35px;
+    font-size: 30px;
+    text-align: center;
+}
+
+.gallery {
+    height: 650px;
+    display: grid;
+    grid-template-rows: repeat(2, 1fr);
+    grid-template-columns: 40% 1fr 1fr;
+    grid-gap: 15px 15px;
+}
+
+.image {
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+    object-fit: cover;
+    transition-property: opacity, scale;
+    transition-duration: 600ms;
+}
+
+.image:hover {
+    cursor: pointer;
+    scale: 1.05;
+}
+
+.gallery:hover> :not(:hover) {
+    opacity: 0.7;
+}
+
+#img1 {
+    object-fit: cover;
+    grid-row: 1/ span 2;
+}
+
+.footerbox {
+    height: 170px;
+    padding: 20px 40px;
+    background-color: rgb(204, 246, 246);
+    display: flex;
+    gap: 200px;
+}
+
+.footerlogobox {
+    height: fit-content;
+    padding-top: 18px;
+    display: flex;
+    align-items: center;
+}
+
+.footersecondbox {
+    height: fit-content;
+    display: flex;
+    gap: 100px;
+}
+
+ul {
+    list-style: none;
+}
+
+.mainlink,
+.support {
+    color: rgb(76, 57, 57);
+    font-weight: 700;
+    font-size: 19px;
+    line-height: 34px;
+}
+
+ul li {
+    line-height: 20px;
+    font-size: 17px;
+}
+
+.supportlast,
+.follow {
+    color: rgb(76, 57, 57);
+    font-weight: bold;
+    font-size: 15px;
+    line-height: 34px;
+}
+
+.inputbox {
+    height: 30px;
+}
+
+.inputbox:focus {
+    outline: none;
+}
+
+.sociallogo {
+    font-size: 25px;
+}
+
+.fa-brands {
+    margin: 3px;
+}
+
+
+
+@media (max-width:428px) {
+    .herobox {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .heroimg {
+        height: 300px;
+        width: 300px;
+    }
+
+    .delicious {
+        height: fit-content;
+        left: 0;
+        width: 90vw;
+    }
+
+    .discount {
+        margin-top: 0;
+        font-size: 18px;
+    }
+
+    .delicious h1 {
+        font-size: 39px;
+    }
+
+    .delicious p {
+        font-size: 22px;
+
+    }
+
+    .delicious button {
+        padding: 10px 15px;
+        font-size: 18px;
+    }
+
+    .featurebox {
+        margin-top: 30px;
+        height: fit-content;
+        flex-direction: column;
+    }
+
+    .commonbox {
+        height: 120px;
+        gap: 20px;
+    }
+
+    .contentbox span {
+        font-size: 20px;
+    }
+
+    .contentbox p {
+        font-size: 21px;
+    }
+
+    hr {
+        margin: 45px 0 30px;
+    }
+
+    .gallery {
+        height: 400px;
+        grid-template-rows: 35% 1fr 1fr;
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    #img1 {
+        grid-row: 1/ span 1;
+        grid-column: 1/ span 2;
+    }
+
+
+
+    .footerbox {
+        height: fit-content;
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .footersecondbox {
+        gap: 75px;
+    }
+
+    .footersecondbox div {
+        width: 50%;
+    }
+
+    .footersecondbox ul li {
+        line-height: 25px;
+        font-size: 20px;
+    }
+
+    .footersecondbox .mainlink,
+    .footersecondbox .support {
+        line-height: 45px;
+        font-size: 23px;
+    }
+
+    .inputbox {
+        width: 75%;
+    }
+
+    .supportlast,
+    .follow {
+        font-size: 20px;
+    }
+}
